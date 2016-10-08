@@ -3,7 +3,7 @@
 int main() 
 {
     char a[1001], b[1001];
-    int i = 0, j = 0, k = 0, l = 0, cnt = 0, sizea = 0, sizeb = 0;
+    int i = 0, j = 0, k = 0, l = 0, cnt = 0, sizea = 0, sizeb = 0;	// minimize the use of single character variable
 
     scanf("%s", a);
     scanf("%s", b);
@@ -22,7 +22,8 @@ int main()
 		{
 		    k++;
 		    l = i +1;
-		    break;
+		    break;	// sometimes 'break' helps to write concise code,
+				// but be careful when you use it in nested loop like this case
 		}
 		else
 		{
