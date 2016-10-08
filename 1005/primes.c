@@ -6,7 +6,8 @@ int main()
     
     for (i=2; i<1000; i++)
     {
-	for (j=2; j<168; j++)
+	for (j=2; j<168; j++)	// big misunderstanding!!!
+				// why do you divide upto this number?
 	{
 	    if (i%j==0)
 	    {
