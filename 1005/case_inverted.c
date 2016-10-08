@@ -3,27 +3,28 @@
 int main() 
 {
     char input[1001], output[1001];
-    int i = 0, j, k;
+    int len = 0, j, k;	// len is more comprensive name than i since it will be used to store the length of input string
 
     scanf("%s", input);
-    while (input[i]!=0) 
-	i++;
-    for (j=0; j<i; j++)
+    while (input[len]!=0) 
+	len++;
+    for (j=0; j<len; j++)
     {
 	if (input[j]>='a' && input[j]<='z')
 	{
 	    output[j] = input[j] + 'A' -'a';
-	    continue;
+	    continue; // not necessary
 	}
-	else if(input[j]>='A' && input[j]<='Z')
+	else if (input[j]>='A' && input[j]<='Z')
 	{
 	    output[j] = input[j] + 'a' -'A';
-	    continue;
+	    continue; // not necessary
 	}
     }
-    for (k=0; k<i; k++)
+    for (k=0; k<len; k++)
     {
-	printf("%c",output[k]);
+	printf("%c",output[k]);  // you can print a string with just one printf() call like printf("%s", string)
     }
+    printf("\n");	// not a must, but missing newline in output makes me uncomfortable :-)
     return 0;
 }
