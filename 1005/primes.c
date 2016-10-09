@@ -6,7 +6,7 @@ int main()
     
     for (i=2; i<1000; i++)
     {
-	for (j=2; j<168; j++)
+	for (j=2; j<i; j++)
 	{
 	    if (i%j==0)
 	    {
@@ -18,6 +18,5 @@ int main()
 	    printf("%d\n",i);
 	cnt=0;
     }	
-
     return 0;
 }
