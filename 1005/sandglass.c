@@ -17,10 +17,6 @@ int main()
 	{
 	    printf("*");
 	}
-	for (k=0; k<i; k++)
-	{
-	    printf(" ");
-	}
 	printf("\n");
 	n--;
     }
@@ -34,10 +30,6 @@ int main()
 	for (j=0; j<2*i+1; j++)
 	{
 	    printf("*");
-	}
-	for (k=m-2; k>0; k--)
-	{
-	    printf(" ");
 	}
 	printf("\n");
 	m--;

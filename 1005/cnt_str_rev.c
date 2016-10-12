@@ -3,7 +3,7 @@
 int main() 
 {
     char a[1001], b[1001];
-    int i = 0, j = 0, k = 0, l = 0, cnt = 0, sizea = 0, sizeb = 0;
+    int i = 0, j = 0, cnt = 0, sizea = 0, sizeb = 0;
 
     scanf("%s", a);
     scanf("%s", b);

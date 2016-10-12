@@ -6,6 +6,6 @@ int main(){
 		i++;
 		average = average + (double)(x - average)/i ;
 	}
-	printf("average = %f\n",average);
+	printf("average = %.6f\n",average);
 	return 0;
 }
