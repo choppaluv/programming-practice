@@ -11,7 +11,7 @@ int main()
     int n,k;
     scanf("%d",&n);
     scanf("%d",&k);
-    if (n<=20 && k>=0 && n>k)
+    if (n<=20 && k>=0 && n>=k)
 	printf("%lld\n",comb(n,k));
     else 
 	printf("Input error\n");
