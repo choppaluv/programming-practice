@@ -5,8 +5,10 @@ int main()
     int score[1001], rank[1001];
     scanf("%d",&n);
     for (i=0;i<n; i++)
+    {
 	scanf("%d",&score[i]);
 	rank[i]=0;
+    }
     for (i=0;i<n;i++)
     {
 	for (j=0;j<n;j++)
