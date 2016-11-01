@@ -3,11 +3,12 @@
 
 int str_fnd(char *x, char *y, int *A, int len_x, int len_y)
 {
-    int i, j, check = 0, cnt =0;
+    int i, j, check, cnt =0;
 
 
-    for (j=0; j<len_x - len_y + 1; j++)
+    for (j=0; j<len_x - len_y + 1; )
     {
+	check = 0;
 	for (i=0; i<len_y; i++)
 	{
 	    if (y[i] == '?')
@@ -22,12 +23,14 @@ int str_fnd(char *x, char *y, int *A, int len_x, int len_y)
 	    A[cnt]=j;
 //	    printf("A[%d] = %d\n", cnt, A[cnt]);
 	    cnt++;
-	    j = j+ len_y -1;
+	    j = j+ len_y;
 	}
-	check = 0;
+	else
+	    j++;
     }
     return cnt;
 }
+
 
 int main()
 {
@@ -37,14 +40,6 @@ int main()
     int len_x = 0, len_y = 0;
     int cnt = 0;
     
-    for (i=0; i<1001; i++)
-    {
-	x[i] = 0;
-	y[i] = 0;
-	z[i] = 0;
-	A[i] = 0;
-    }
-
     char ch;
     while ((ch=getchar()) != '\n')
     {
@@ -52,6 +47,7 @@ int main()
 //	printf("x[%d] = %c\n", len_x, x[len_x]);
 	len_x++;
     }
+    x[len_x] = '\0';
     while ((ch=getchar()) != '\n')
     {
 	y[len_y] = ch;
@@ -75,7 +71,7 @@ int main()
     for (i=0; i<len_x; i++)
 	printf("%c", x[i]);
    
-    printf("\n");
+    printf("%s\n", x);
 
     return 0;
 }

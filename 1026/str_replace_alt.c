@@ -37,7 +37,7 @@ void str_overwrite(char *dest, char *src)
 
 int main()
 {
-    char x[1001], y[1001], x[1001];
+    char x[1001], y[1001], z[1001];
     int len_x, len_y;
     char *p;
 
@@ -57,7 +57,7 @@ int main()
             p++;
     }
     
-    printf("%s\n, x);
+    printf("%s\n", x);
     
     return 0;
 }
