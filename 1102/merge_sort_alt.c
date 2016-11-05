@@ -3,7 +3,7 @@
 
 void merge(int array[], int start1, int end1, int start2, int end2)
 {
-    int tmp[end2];
+    int *tmp = malloc(sizeof(int)*(end2+1));
     int i = start1, j = start2, k =start1;
     while ( (i != end1+1) && (j != end2+1))
     {
@@ -25,6 +25,8 @@ void merge(int array[], int start1, int end1, int start2, int end2)
 
     for (i=start1; i<=end2; i++)
 	array[i] = tmp[i];
+
+    free(tmp);
     return;
 } 
 
@@ -66,5 +68,6 @@ int main()
     for (i=0; i<N; i++)
 	printf("%d ", array[i]); 
 
+    free(array);
     return 0;
 }
